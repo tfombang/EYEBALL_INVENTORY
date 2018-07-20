@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="eyebinventoryDataSet1" targetNamespace="http://tempuri.org/eyebinventoryDataSet1.xsd" xmlns:mstns="http://tempuri.org/eyebinventoryDataSet1.xsd" xmlns="http://tempuri.org/eyebinventoryDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="eyebinventoryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="eyebinventoryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.EYEBALL_INVENTORY.Properties.Settings.GlobalReference.Default.eyebinventoryConnectionString" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="salesTableAdapter" GeneratorDataComponentClassName="salesTableAdapter" Name="sales" UserDataComponentName="salesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="eyebinventoryConnectionString (Settings)" DbObjectName="eyebinventory.sales" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        transactionID, itemName, unitPrice, quantity, grossPrice, agent, transactionDate
+FROM            sales</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="transactionID" DataSetColumn="transactionID" />
+              <Mapping SourceColumn="itemName" DataSetColumn="itemName" />
+              <Mapping SourceColumn="unitPrice" DataSetColumn="unitPrice" />
+              <Mapping SourceColumn="quantity" DataSetColumn="quantity" />
+              <Mapping SourceColumn="grossPrice" DataSetColumn="grossPrice" />
+              <Mapping SourceColumn="agent" DataSetColumn="agent" />
+              <Mapping SourceColumn="transactionDate" DataSetColumn="transactionDate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="eyebinventoryDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="eyebinventoryDataSet1" msprop:Generator_UserDSName="eyebinventoryDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="sales" msprop:Generator_TableClassName="salesDataTable" msprop:Generator_TableVarName="tablesales" msprop:Generator_RowChangedName="salesRowChanged" msprop:Generator_TablePropName="sales" msprop:Generator_RowDeletingName="salesRowDeleting" msprop:Generator_RowChangingName="salesRowChanging" msprop:Generator_RowEvHandlerName="salesRowChangeEventHandler" msprop:Generator_RowDeletedName="salesRowDeleted" msprop:Generator_RowClassName="salesRow" msprop:Generator_UserTableName="sales" msprop:Generator_RowEvArgName="salesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="transactionID" msprop:Generator_ColumnVarNameInTable="columntransactionID" msprop:Generator_ColumnPropNameInRow="transactionID" msprop:Generator_ColumnPropNameInTable="transactionIDColumn" msprop:Generator_UserColumnName="transactionID" type="xs:int" minOccurs="0" />
+              <xs:element name="itemName" msprop:Generator_ColumnVarNameInTable="columnitemName" msprop:Generator_ColumnPropNameInRow="itemName" msprop:Generator_ColumnPropNameInTable="itemNameColumn" msprop:Generator_UserColumnName="itemName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="unitPrice" msprop:Generator_ColumnVarNameInTable="columnunitPrice" msprop:Generator_ColumnPropNameInRow="unitPrice" msprop:Generator_ColumnPropNameInTable="unitPriceColumn" msprop:Generator_UserColumnName="unitPrice" type="xs:float" />
+              <xs:element name="quantity" msprop:Generator_ColumnVarNameInTable="columnquantity" msprop:Generator_ColumnPropNameInRow="quantity" msprop:Generator_ColumnPropNameInTable="quantityColumn" msprop:Generator_UserColumnName="quantity" type="xs:float" />
+              <xs:element name="grossPrice" msprop:Generator_ColumnVarNameInTable="columngrossPrice" msprop:Generator_ColumnPropNameInRow="grossPrice" msprop:Generator_ColumnPropNameInTable="grossPriceColumn" msprop:Generator_UserColumnName="grossPrice" type="xs:float" />
+              <xs:element name="agent" msprop:Generator_ColumnVarNameInTable="columnagent" msprop:Generator_ColumnPropNameInRow="agent" msprop:Generator_ColumnPropNameInTable="agentColumn" msprop:Generator_UserColumnName="agent" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="transactionDate" msprop:Generator_ColumnVarNameInTable="columntransactionDate" msprop:Generator_ColumnPropNameInRow="transactionDate" msprop:Generator_ColumnPropNameInTable="transactionDateColumn" msprop:Generator_UserColumnName="transactionDate" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
